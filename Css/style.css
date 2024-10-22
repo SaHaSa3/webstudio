@@ -1,0 +1,322 @@
+:root {
+    --accent-color: #2196f3;
+    --logo-color: #000;
+    --text-color: #212121;
+    --additional-color: #757575;
+    --footer-namber: rgba(255, 255, 255, 0.6);
+    --footer-background: #2f303a;
+    --team-background: #f5f4fa;
+    --main-background: #fff;
+  }
+  
+  body {
+    font-family: "Roboto", "sans-serif";
+  }
+  
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  
+  .header-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-blue {
+    color: var(--accent-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.78px;
+  }
+  
+  .header-logo {
+    color: var(--logo-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.78px;
+    margin-right: 93px;
+  }
+  
+  .header-list {
+    display: flex;
+    gap: 50px;
+  }
+
+  .nav-link:hover{
+    color: var(--accent-color);
+  }
+  
+  .nav-studio {
+    color: var(--accent-color);
+  }
+
+  .nav-link {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+  }
+
+  .contact-list {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+  }
+  
+.contact-link:hover{
+  color: var(--accent-color);
+}
+
+  .contact-link {
+    color: var(--additional-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+  }
+  
+  .hero {
+    background-image: linear-gradient( rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url(../img/zal.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-size: cover;
+   
+
+  }
+  .hero-title {
+    color: var(--main-background);
+    width: 696px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 44px;
+    line-height: 1.36;
+    font-size: 44px;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-button {
+    background-color: var(--accent-color);
+    color: var(--main-background);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .advantages {
+    padding-top: 94px;
+  }
+
+  .advantages-item::before {
+    content: "";
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--team-background);
+    background-image: url(../img/antenna.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+    margin-bottom: 30px;
+    display: block;
+      }
+      
+      .advantages-item:nth-child(2)::before{
+        background-image: url(../img/godini.png);
+    
+      }
+    
+      .advantages-item:nth-child(3)::before{
+        background-image: url(../img/diagram.png);
+        
+      }
+    
+      .advantages-item:nth-child(4)::before{
+        background-image: url(../img/astronavt.png);
+      }
+  
+  .advantages-list {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .list-title {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .advantages-text {
+    color: var(--additional-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+  }
+  
+  .work {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .work-title {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.31;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+  }
+
+  .team-picture {
+    max-width: 100%;
+  }
+  
+  .work-list {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .work-item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  
+  .work-img {
+    width: 100%;
+  }
+  
+  .team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--team-background);
+  }
+  
+  .team-title {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+  }
+  
+  .team-box {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .team-item {
+    flex-basis:calc((100% - 90px) / 4);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+  }
+  
+  .team-vraper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--main-background);
+    border-radius: 0px 0px 4px 4px;
+
+  }
+  
+  .team-list {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.48px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 0px 0px 4px 4px;
+  }
+  
+  .team-text {
+    color: var(--additional-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: 0.48px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: var(--footer-background);
+    color: var(--main-background);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .address {
+    margin-top: 20px;
+    font-style: normal;
+  }
+  
+  .footer-list {
+    margin-top: 9px;
+  }
+  
+  .footer-web {
+    color: var(--accent-color);
+  font-family: Raleway;
+  font-size: 26px;
+  font-weight: 700;
+  line-height:1.38;
+  letter-spacing: 0.78px;
+  }
+  
+  .footer-studio {
+    color:var(--main-background);
+  font-family: Raleway;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: 0.78px;
+  }
+  
+  .address-link {
+    color: var(--main-background);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+  }
+  
+  .footer-link {
+    color:var(--footer-namber);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.42px;
+  }
+  
+  .footer-item {
+    margin-top: 9px;
+  }
