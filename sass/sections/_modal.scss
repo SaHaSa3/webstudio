@@ -1,0 +1,226 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(88, 88, 88, 0.5);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
+    opacity: 1;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.is-hidden .modal {
+    transform: translateY(100px) skew(10deg, 20deg);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.modal {
+    padding: 40px;
+    border-radius: 4px;
+    background: $title-color;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__title {
+        width: 370px;
+        text-align: center;
+        margin: 0px auto;
+        color: $modal-color;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: 0.6px;
+        margin-bottom: 12px;
+
+        @media screen and (max-width: 479px) {
+            width: 250px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 448px;
+        }
+    }
+
+    &__signature {
+        width: 100%;
+        color: $desk-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.67;
+        letter-spacing: 0.12px;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    &__box {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: 40px;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid $modal-border-color;
+        padding-left: 42px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+        &:hover,
+        &:focus {
+            outline: none;
+            border: 1px solid $accent-color;
+        }
+        
+        &:hover + .input-img,
+        &:focus + .input-img {
+            fill: $accent-color;
+        }
+    }
+
+    &__img {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 12px;
+        top: 11px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__textarea {
+        width: 100%;
+        display: block;
+        height: 120px;
+        border-radius: 4px;
+        border: 1px solid $modal-border-color;
+        resize: none;
+        padding: 12px 16px;
+        color: $modal-placehorlder;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.12px;
+        margin-bottom: 20px;
+        display: block;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            border: 1px solid $accent-color;
+            outline: none;
+        }
+    }
+
+    &__chek__label {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flexbox();
+    }
+
+    &__chekbox {
+        height: 15px;
+        margin-right: 7px;
+    }
+
+    &__text {
+        color: $desk-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.36px;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.71;
+            letter-spacing: 0.42px;
+        }
+    }
+
+    &__link {
+        color: $accent-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.36px;
+        text-decoration-line: underline;
+        
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.71;
+            letter-spacing: 0.42px;
+        }
+    }
+
+    &__btn {
+        padding: 10px 52px;
+        border-radius: 4px;
+        background: $modal-btn;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        border: none;
+        color: $title-color;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.96px;
+        display: block;
+        margin: 30px auto 0px auto;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        
+        &:hover, &:focus {
+            background-color: $clients-border;
+            color: $background-color;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    &__close__btn {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flexbox();
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        background-color: $title-color;
+        border-radius: 50%;
+        border: 1px solid $modal-border-color;
+        padding: 6px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            outline: none;
+            .modal__close__img{
+                fill: $accent-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__close__img {
+        width: 18px;
+        height: 18px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
